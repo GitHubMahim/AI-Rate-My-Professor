@@ -1,0 +1,124 @@
+{
+    "reviews": [
+        {
+            "professor": "Dr. Emily Robertson",
+            "subject": "Mathematics",
+            "stars": 4,
+            "review": "Very detailed and clear in explanations, though the exams are tough."
+        },
+        {
+            "professor": "Dr. Mark Johnson",
+            "subject": "Physics",
+            "stars": 5,
+            "review": "Inspiring lectures and genuinely cares about student success."
+        },
+        {
+            "professor": "Dr. Anna Kowalski",
+            "subject": "Chemistry",
+            "stars": 3,
+            "review": "Good course material, but lectures can be a bit monotonous."
+        },
+        {
+            "professor": "Dr. John Lee",
+            "subject": "Biology",
+            "stars": 5,
+            "review": "Passionate about the subject, makes learning enjoyable."
+        },
+        {
+            "professor": "Dr. Clara Zheng",
+            "subject": "Computer Science",
+            "stars": 4,
+            "review": "Challenging projects but very rewarding, great at explaining difficult concepts."
+        },
+        {
+            "professor": "Dr. David Smith",
+            "subject": "History",
+            "stars": 2,
+            "review": "Needs to update his materials, but fairly knowledgeable."
+        },
+        {
+            "professor": "Dr. Linda Bates",
+            "subject": "English Literature",
+            "stars": 5,
+            "review": "Wonderful insights into classical literature, very inspiring."
+        },
+        {
+            "professor": "Dr. Muhammad Ali",
+            "subject": "Political Science",
+            "stars": 3,
+            "review": "Knows a lot, but classes can be better organized."
+        },
+        {
+            "professor": "Dr. Susan Choi",
+            "subject": "Psychology",
+            "stars": 4,
+            "review": "Great at making complex theories understandable."
+        },
+        {
+            "professor": "Dr. Roberto Garcia",
+            "subject": "Sociology",
+            "stars": 5,
+            "review": "Engages with all students and encourages thoughtful discussions."
+        },
+        {
+            "professor": "Dr. Heather French",
+            "subject": "Philosophy",
+            "stars": 4,
+            "review": "Deeply philosophical and intellectually stimulating classes."
+        },
+        {
+            "professor": "Dr. James Peterson",
+            "subject": "Economics",
+            "stars": 3,
+            "review": "Good content, but the lectures could be more engaging."
+        },
+        {
+            "professor": "Dr. Maria Gonzalez",
+            "subject": "Anthropology",
+            "stars": 5,
+            "review": "Extremely helpful and provides fascinating fieldwork opportunities."
+        },
+        {
+            "professor": "Dr. Tom Bradley",
+            "subject": "Engineering",
+            "stars": 4,
+            "review": "Practical and hands-on approach to teaching, very helpful."
+        },
+        {
+            "professor": "Dr. Alice Murray",
+            "subject": "Art History",
+            "stars": 5,
+            "review": "Her passion for art history is contagious, love her classes!"
+        },
+        {
+            "professor": "Dr. Peter Chang",
+            "subject": "Statistics",
+            "stars": 3,
+            "review": "Solid teaching but the tests are unnecessarily hard."
+        },
+        {
+            "professor": "Dr. Sarah Loomis",
+            "subject": "Music Theory",
+            "stars": 5,
+            "review": "Makes learning music theory fun and easy, very interactive classes."
+        },
+        {
+            "professor": "Dr. Neil Schwartz",
+            "subject": "Philosophy",
+            "stars": 2,
+            "review": "Interesting topics but the presentations are quite dry."
+        },
+        {
+            "professor": "Dr. Olivia Stevenson",
+            "subject": "Medicine",
+            "stars": 4,
+            "review": "Very knowledgeable and supportive, but the course load is heavy."
+        },
+        {
+            "professor": "Dr. Henry Walton",
+            "subject": "Environmental Science",
+            "stars": 5,
+            "review": "Incredible knowledge of environmental issues, very engaging."
+        }
+    ]
+}
