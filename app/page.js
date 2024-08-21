@@ -1,9 +1,18 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { Box, Button, TextField, Stack } from "@mui/material";
-//testing something - ignore this line
+import { Box, Button, TextField, Stack, ThemeProvider, CssBaseline, Switch, FormControlLabel, Typography } from "@mui/material";
+import { styled } from '@mui/material/styles';
+import { getTheme } from "./theme";
+
 export default function Home() {
+  const [mode, setMode] = useState('light');
+  const toggleTheme = () => {
+    setMode((mode) => (mode === 'light' ? 'dark' : 'light'));
+  };
+  const theme = getTheme(mode);
+
+
   const [messages, setMessages] = useState([
     {
       role: "assistant",
@@ -51,67 +60,82 @@ export default function Home() {
     });
   };
 
+
   return (
-    <Box
-      width="100vw"
-      height="100vh"
-      display="flex"
-      flexDirection="column"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <Stack
-        direction="column"
-        width="500px"
-        height="700px"
-        border="1px solid black"
-        p={2}
-        spacing={3}
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Box
+        width="100vw"
+        height="100vh"
+        display="flex"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
       >
+        <Typography
+          variant="h3"
+          marginBottom={'30px'}
+        >
+          Professor Finder Assistant
+        </Typography>
         <Stack
           direction="column"
-          spacing={2}
-          flexGrow={1}
-          overflow="auto"
-          maxHeight="100%"
+          width="500px"
+          height="700px"
+          border="1px solid"
+          borderColor={(mode === 'light' ? 'black' : 'white')}
+          p={2}
+          spacing={3}
         >
-          {messages.map((message, index) => (
-            <Box
-              key={index}
-              display="flex"
-              justifyContent={
-                message.role === "assistant" ? "flex-start" : "flex-end"
-              }
-            >
+          <Stack
+            direction="column"
+            spacing={2}
+            flexGrow={1}
+            overflow="auto"
+            maxHeight="100%"
+          >
+            {messages.map((message, index) => (
               <Box
-                bgcolor={
-                  message.role === "assistant"
-                    ? "primary.main"
-                    : "secondary.main"
+                key={index}
+                display="flex"
+                justifyContent={
+                  message.role === "assistant" ? "flex-start" : "flex-end"
                 }
-                color="white"
-                borderRadius={16}
-                p={3}
               >
-                {message.content}
+                <Box
+                  bgcolor={
+                    message.role === "assistant"
+                      ? "primary.main"
+                      : "secondary.main"
+                  }
+                  color={(mode === 'dark' ? 'black' : 'white')}
+                  borderRadius={16}
+                  p={3}
+                >
+                  {message.content}
+                </Box>
               </Box>
-            </Box>
-          ))}
-        </Stack>
-        <Stack direction="row" spacing={2}>
-          <TextField
-            lable="Message"
-            fullWidth
-            value={message}
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
+            ))}
+          </Stack>
+          <Stack direction="row" spacing={2}>
+            <TextField
+              lable="Message"
+              fullWidth
+              value={message}
+              onChange={(e) => {
+                setMessage(e.target.value);
+              }}
+            />
+            <Button variant="containted" onClick={sendMessage}>
+              Send
+            </Button>
+          </Stack>
+          <FormControlLabel
+            control={<Switch checked={mode === 'dark'} onChange={toggleTheme} />}
+            label={(mode === 'light' ? 'Dark Mode' : 'Light Mode')}
           />
-          <Button variant="containted" onClick={sendMessage}>
-            Send
-          </Button>
         </Stack>
-      </Stack>
-    </Box>
+      </Box>
+    </ThemeProvider>
   );
 }
