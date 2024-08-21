@@ -3,3 +3,51 @@
   padding: 0;
   margin: 0;
 }
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  /* Modern font */
+  background-color: #f4f4f9;
+  /* Lighter background */
+  color: #333;
+  /* Soft black for text */
+}
+
+/* Chatbox styling */
+.Stack {
+  background-color: #ffffff;
+  /* White background for the chat area */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  border-radius: 8px;
+  /* Rounded corners for modern feel */
+}
+
+.Box {
+  padding: 10px;
+  margin: 5px;
+  background-color: #e8e8e8;
+  /* Different background for messages */
+  border-radius: 8px;
+  /* Rounded corners for messages */
+}
+
+/* Button styling */
+.Button {
+  background-color: #0056b3;
+  /* Primary color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  /* Rounded button */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  /* Smooth transition for hover */
+}
+
+.Button:hover {
+  background-color: #003d7a;
+  /* Darker on hover */
+}
