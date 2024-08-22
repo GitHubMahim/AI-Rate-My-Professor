@@ -13,14 +13,14 @@ export default function Home() {
   const theme = getTheme(mode);
 
 
-  const [messages, setMessages] = useState([
+  const [messages, setMessages] = useState([ // All prev messages
     {
       role: "assistant",
       content:
         "Hello! How can I assist you in finding information about professors today?",
     },
   ]);
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState(""); // Current message
   const sendMessage = async () => {
     setMessages((messages) => [
       ...messages,
